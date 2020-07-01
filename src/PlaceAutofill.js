@@ -1,12 +1,13 @@
 import { isArray } from 'vue-interface/src/Helpers/Functions';
 
 const ALIASES = {
-    'street': ['street_number', 'route', 'intersection'],
-    'city': ['locality'],
+    'street': ['route'],
+    'streetnumberooo': ['street_number'],
+    'city': ['administrative_area_level_3'],
     'state': ['administrative_area_level_1'],
     'zip': ['postal_code'],
     'zipcode': ['postal_code'],
-    'county': ['administrative_area_level_2']
+    'county': ['administrative_area_level_1']
 };
 
 function intersection(a, b) {
