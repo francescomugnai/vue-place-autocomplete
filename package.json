@@ -1,6 +1,6 @@
 {
   "name": "vue-place-autocomplete",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "repository": "https://github.com/actengage/vue-place-autocomplete",
   "scripts": {
     "prepare": "npm run build",
