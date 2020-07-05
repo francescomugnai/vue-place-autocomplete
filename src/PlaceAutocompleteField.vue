@@ -277,7 +277,7 @@ export default {
     },
 
     mounted() {
-        script(`${this.baseUri}?key=${this.apiKey}&libraries=${this.libraries.join(',')}language`).then(() => {
+        script(`${this.baseUri}?key=${this.apiKey}&libraries=${this.libraries.join(',')}${this.baseUri}`).then(() => {
             this.$geocoder = new window.google.maps.Geocoder();
             this.$service = new window.google.maps.places.AutocompleteService();
             this.loaded = true;
