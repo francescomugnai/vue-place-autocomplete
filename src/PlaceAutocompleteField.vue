@@ -78,6 +78,11 @@ export default {
             type: String,
             default: 'https://maps.googleapis.com/maps/api/js'
         },
+   
+        language: {
+            type: String,
+            default: '&language=it&region=IT'
+        },
 
         componentRestrictions: {
             type: [Boolean, Object, String],
@@ -272,7 +277,7 @@ export default {
     },
 
     mounted() {
-        script(`${this.baseUri}?key=${this.apiKey}&libraries=${this.libraries.join(',')}`).then(() => {
+        script(`${this.baseUri}?key=${this.apiKey}&libraries=${this.libraries.join(',')}language`).then(() => {
             this.$geocoder = new window.google.maps.Geocoder();
             this.$service = new window.google.maps.places.AutocompleteService();
             this.loaded = true;
