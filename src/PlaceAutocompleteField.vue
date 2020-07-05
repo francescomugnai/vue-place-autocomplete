@@ -84,6 +84,11 @@ export default {
             default: '&language=it&region=IT'
         },
 
+        testLanguage: {
+            type: String,
+            default: '&language=it&region=IT'
+        },
+
         componentRestrictions: {
             type: [Boolean, Object, String],
             default: false
@@ -294,6 +299,9 @@ export default {
             showActivityIndicator: this.activity
         };
     }
+
+
+
 
     /*
     {
