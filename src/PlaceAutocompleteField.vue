@@ -147,9 +147,13 @@ export default {
 
         select(place) {
             geocode({ placeId: place.place_id }).then(response => {
+                this.lat = response[0].geometry.location.lat();
+                this.lng = response[0].geometry.location.lng();
+
                 this.hide();
                 this.$emit('input', this.query = response[0].formatted_address);
                 this.$emit('select', place, response[0]);
+                this.$emit('coordinate', this.lat, this.lng);
             });
         },
 
@@ -291,7 +295,9 @@ export default {
             predictions: false,
             query: this.value,
             showPredictions: false,
-            showActivityIndicator: this.activity
+            showActivityIndicator: this.activity,
+            lat: null,
+            lng: null
         };
     }
 
